@@ -1,0 +1,24 @@
+extends layout
+block body
+    html.
+        <body>
+        <div class="container-fluid">
+        <div class="row">
+        <div class="col-xs-12">
+            <div class="btn-primary"><h3>Welcome to My Store</div>
+            <div class="text-center" style="padding-top:5%">
+            <h1></h1><h1></h1>
+            <h4>#{msg}</h4>
+            <form method="post" action="/save" class="form-inline">
+                <p>
+                    <label>Message:</label>
+                    <textarea class="form-control" rows="3" name="msg" style="width:100%" required></textarea>
+                <p>
+                    <input type="submit" class="btn btn-primary" value="Save">
+                </p>
+            </form>
+            </div>
+        </div>
+        </div>
+        </div>
+    </body>

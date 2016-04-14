@@ -1,0 +1,28 @@
+extends layout
+block body
+    html.
+        <body>
+        <div class="container-fluid">
+        <div class="row">
+        <div class="col-xs-12">
+            <div class="btn-primary"><h3>Welcome to My Store</div>
+            <div class="text-center">
+            <h1></h1><h1></h1>
+            <h4>#{msg}</h4>
+            <form method="post" action="/login" class="form-inline">
+                <p>
+                    <label>Username:</label>
+                    <input type="text" name="username" class="form-control" required> </p>
+                <p>
+                    <label>Password:</label>
+                    <input type="password" name="password" required class="form-control">
+                </p>
+                <p>
+                    <input type="submit" class="btn btn-primary" value="Login">
+                </p>
+            </form>
+            </div>
+        </div>
+        </div>
+        </div>
+    </body>

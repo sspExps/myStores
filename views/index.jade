@@ -1,0 +1,20 @@
+doctype html
+html
+	head
+		title= MyStore
+		meta(name='viewport', content='width=device-width, initial-scale=1')
+		meta(http-equiv="refresh",content="30")
+		link(rel='stylesheet', href='/stylesheets/bootstrap.css')
+		link(rel='stylesheet', href='/stylesheets/store.css')
+		block head
+	body
+		.container-fluid.no-padding
+			div#type
+			div#menu-scroll
+			script(src='/javascripts/jquery-2.2.0.min.js')
+			script(src='/javascripts/bootstrap.min.js')
+			script(src='/javascripts/store.js')
+			script(type='text/javascript').
+				msg = "#{msg}";
+				msg = (msg) ? msg.split(",") : [];
+				$('#type').typer(msg);
