@@ -12,12 +12,33 @@ function checkAuth(req, res, next) {
         next();
     }
 }
-router.get('/update', checkAuth, function (req, res) {
-    res.render('update');
+
+function getData() {
+    return new Promise(function(resolve, reject)  {
+        fs.readFile('message.txt', 'utf8', function(err, data) {
+            if (err) {
+                dataMsg = "";
+            }
+            dataMsg = data;
+            return resolve(data);
+        });
+    });
+}
+
+router.get('/update', checkAuth, function(req, res) {
+    getData().then(function(dataMsg) {
+        res.render('update', {
+            title: 'MyStores',
+            msg: JSON.parse(dataMsg)
+        });
+    }, function(error) {
+        console.log("Error");
+    });
 });
-router.post('/save', function (req, res) {
+router.post('/save', function(req, res) {
     var post = req.body;
-    fs.writeFile('message.txt', post.msg.trim(), function (err) {
+    console.log(post);
+    fs.writeFile('message.txt', JSON.stringify(post), function(err) {
         if (err) {
             res.render('saved', {
                 msg: 'Error!!! Please try again..'
@@ -29,30 +50,28 @@ router.post('/save', function (req, res) {
 
 
 
-router.post('/login', function (req, res) {
+router.post('/login', function(req, res) {
     var post = req.body;
     if (post.username === 'sam' && post.password === 'samWelcome') {
         req.session.user_id = 101123;
         res.redirect('/update');
     } else {
         res.render('login', {
-            title: 'You are not authorized to view this page'
-            , msg: "Please check your username/password"
+            title: 'You are not authorized to view this page',
+            msg: "Please check your username/password"
         });
 
     }
 });
 /* GET home page. */
-router.get('/', function (req, res, next) {
-    fs.readFile('message.txt', 'utf8', function (err, data) {
-        if (err) {
-            dataMsg = "";
-        }
-        dataMsg = data;
+router.get('/', function(req, res, next) {
+    getData().then(function(dataMsg) {
         res.render('index', {
-        title: 'Express'
-        , msg: dataMsg
-         });
+            title: 'MyStores',
+            msg: dataMsg
+        });
+    }, function(error) {
+        console.log("Error");
     });
 });
 

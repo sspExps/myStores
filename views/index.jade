@@ -11,10 +11,7 @@ html
 		.container-fluid.no-padding
 			div#type
 			div#menu-scroll
+			div#msg= msg
 			script(src='/javascripts/jquery-2.2.0.min.js')
 			script(src='/javascripts/bootstrap.min.js')
 			script(src='/javascripts/store.js')
-			script(type='text/javascript').
-				msg = "#{msg}";
-				msg = (msg) ? msg.split(",") : [];
-				$('#type').typer(msg);

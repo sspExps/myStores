@@ -1,23 +1,23 @@
-$.fn.typer = function (text, options) {
+$.fn.typer = function(text, options) {
     options = $.extend({}, {
-        char: ' '
-        , delay: 1000
-        , duration: 600
-        , endless: true
+        char: ' ',
+        delay: 1000,
+        duration: 600,
+        endless: true
     }, options || text);
 
     text = $.isPlainObject(text) ? options.text : text;
 
-    var elem = $(this)
-        , isTag = false
-        , c = 0;
+    var elem = $(this),
+        isTag = false,
+        c = 0;
 
     (function typetext(i) {
         var e = ({
-                string: 1
-                , number: 1
-            }[typeof text] ? text : text[i]) + options.char
-            , char = e.substr(c++, 1);
+                string: 1,
+                number: 1
+            }[typeof text] ? text : text[i]) + options.char,
+            char = e.substr(c++, 1);
 
         if (char === '<') {
             isTag = true;
@@ -47,9 +47,19 @@ $.fn.typer = function (text, options) {
 };
 
 
-$(document).ready(function () {
-    $("#menu-scroll").height($(document).height() - 200);
-    $(window).resize(function () {
-        $("#menu-scroll").height($(document).height() - 200);
+$(document).ready(function() {
+    var tData = ($('#msg').html()) ? JSON.parse($('#msg').html().split(',')) : "",
+        height = 0;
+    if (tData.msg) {
+        height = 200;
+        $('#type').typer(tData.msg.split(','));
+    }
+    (tData.textColor) ? $('#type').css('color', tData.textColor): '';
+    (tData.bgColor) ? $('body').css('background-color', tData.bgColor): '';
+    $("#menu-scroll").height($(document).height() - height);
+    $(window).resize(function() {
+        $("#menu-scroll").height($(document).height() - height);
     });
+
+
 });

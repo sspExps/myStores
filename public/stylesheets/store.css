@@ -51,3 +51,7 @@ body {
 .no-padding {
     padding: 0;
 }
+
+#msg {
+    display: none;
+}

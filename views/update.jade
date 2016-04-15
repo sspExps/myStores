@@ -8,13 +8,21 @@ block body
             <div class="btn-primary"><h3>Welcome to My Store</div>
             <div class="text-center" style="padding-top:5%">
             <h1></h1><h1></h1>
-            <h4>#{msg}</h4>
             <form method="post" action="/save" class="form-inline">
                 <p>
                     <label>Message:</label>
-                    <textarea class="form-control" rows="3" name="msg" style="width:100%" required></textarea>
+                    <textarea class="form-control" rows="3" name="msg" style="width:100%">#{msg.msg}</textarea>
+                </p>
                 <p>
-                    <input type="submit" class="btn btn-primary" value="Save">
+                    <label>Text Color:</label>
+                     <input type='color' name='textColor' class="color" value='#{msg.textColor}' />
+                </p>
+                <p>
+                    <label>Background:</label>
+                    <input type='color' name='bgColor' class="color" value='#{msg.bgColor}' />
+                </p>
+                <p>
+                     <input type="submit" class="btn btn-primary" value="Save">
                 </p>
             </form>
             </div>

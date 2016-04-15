@@ -1,1 +1,1 @@
-Fries, Message, test
+{"msg":"test hello, Free Fries, Special","textColor":"#ec1328","bgColor":"#804040"}
