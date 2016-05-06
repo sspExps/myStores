@@ -67,3 +67,7 @@ body {
 #playerContainer {
     z-index: 300;
 }
+
+#myAd {
+    float: left;
+}
