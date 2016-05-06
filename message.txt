@@ -1,1 +1,1 @@
-{"msg":"test hello, Free Fries, Special","textColor":"#ec1328","bgColor":"#804040"}
+{"msg":"Special Special Special, Free Fries, Free Sodas","textColor":"#ec1328","bgColor":"#804040"}

@@ -1,9 +1,9 @@
 doctype html
 html
 	head
-		title= MyStore
-		meta(name='viewport', content='width=device-width, initial-scale=1')
-		meta(http-equiv="refresh",content="30")
+		title MyStores
+		link(rel='manifest', href="/manifest.json")
+		meta(name='viewport', content='width=device-width')
 		link(rel='stylesheet', href='/stylesheets/bootstrap.css')
 		link(rel='stylesheet', href='/stylesheets/store.css')
 		block head
@@ -12,6 +12,8 @@ html
 			div#type
 			div#menu-scroll
 			div#msg= msg
+			div#channel.
+			<iframe width="560" height="210" src="https://www.youtube.com/embed/8NOEpJGAUZk?rel=0&&autoplay=1&loop=1&amp;controls=0&amp;showinfo=0&playlist=8NOEpJGAUZk" frameborder="0" allowfullscreen" frameborder="0" allowfullscreen></iframe>
 			script(src='/javascripts/jquery-2.2.0.min.js')
 			script(src='/javascripts/bootstrap.min.js')
 			script(src='/javascripts/store.js')
