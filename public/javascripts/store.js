@@ -1,7 +1,7 @@
 $.fn.typer = function (text, options) {
     options = $.extend({}, {
         char: ' '
-        , delay: 1000
+        , delay: 2000
         , duration: 600
         , endless: true
     }, options || text);
