@@ -1,1 +1,1 @@
-{"msg":"Special Special Special, Free Fries, Free Sodas","textColor":"#ec1328","bgColor":"#804040"}
+{"msg":"Happy, Mother's Day, Sunday May 08th, with any purchase, Moms get FREE, Milkshake","textColor":"#51de21","bgColor":"#bb0e04"}
