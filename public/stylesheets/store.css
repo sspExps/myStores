@@ -68,10 +68,6 @@ body {
     z-index: 300;
 }
 
-#myAd {
-    float: left;
-}
-
 body {
     font-family: 'Lucida Grande', 'Helvetica Neue', sans-serif;
     font-size: 13px;
@@ -90,4 +86,22 @@ body {
     -o-transition: all .8s ease-in-out;
     -moz-transition: all .8s ease-in-out;
     -webkit-transition: all .8s ease-in-out;
+}
+
+.myContainer {
+    min-width: 960px;
+    margin: 0 auto;
+    position: relative;
+}
+
+#myAd {
+    float: left;
+    margin: 10px auto 10px;
+    clear: both;
+}
+
+.yAd {
+    position: absolute;
+    left: 0;
+    top: -10px;
 }
