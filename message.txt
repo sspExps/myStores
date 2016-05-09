@@ -1,1 +1,1 @@
-{"msg":"HAPPY MOTHER'S DAY-SUNDAY MAY8th WITH ANY PURCHASE, MOMS GET FREE MILKSHAKE","textColor":"#ffff00","bgColor":"#ff0000"}
+{"msg":"Happy Mther's Day-Sunday May-8th With Any Purchase, MoMs Get FREE MilkShake","textColor":"#ffff00","bgColor":"#ff0000"}

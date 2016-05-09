@@ -9,6 +9,11 @@ html
         link(rel='stylesheet', href='/stylesheets/store.css')
         block head
     body
+        div.
+            <canvas id="canvas" style="position:absolute; z-index:1; left:0px; top:0px" height="0px" width="0px"></canvas>
+            <div style="display:none;">
+                <img id="source" src="https://mdn.mozillademos.org/files/5397/rhino.jpg" width="300" height="227">
+            </div>
         .container-fluid.no-padding
             div#menu-scroll
             div#msg= msg
