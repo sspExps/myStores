@@ -8,10 +8,10 @@ $(document).ready(function () {
     (tData.textColor) ? $('#type').css('color', tData.textColor): '';
     (tData.bgColor) ? $('body').css('background-color', tData.bgColor): '';
     $("#menu-scroll").height($(document).height() - height);
-    $('#dd').css('width', $(document).width() - 365)
+    //    $('#dd').css('width', $(document).width() - 365)
     $(window).resize(function () {
         $("#menu-scroll").height($(document).height() - height);
-        $('#dd').css('width', $(document).width() - 365);
+        //        $('#dd').css('width', $(document).width() - 365);
     });
 });
 
